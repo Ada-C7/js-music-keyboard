@@ -1,27 +1,12 @@
 $(document).ready( function() {
 
-  $(".d").click(function(){
-    playKey(this.class);
-  });
+  $("button").click(function(){
+    var getClasses = $(this).attr("class");
+    var classes = getClasses.split(" ");
 
-  $(".e").click(function(){
-    playKey('e');
-  });
-
-  $(".f").click(function(){
-    playKey('f');
-  });
-
-  $(".g").click(function(){
-    playKey('g');
-  });
-
-  $(".a").click(function(){
-    playKey('a');
-  });
-
-  $(".b").click(function(){
-    playKey('b');
+    for (i = 0; i < classes.length; i++){
+      playKey(classes[i]);
+    }
   });
 
   $('body').keydown(function(event){
