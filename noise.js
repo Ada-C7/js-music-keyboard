@@ -1,7 +1,9 @@
 $(document).ready( function() {
+
   $('.note').click(function(event) {
-    // $('#cAudio').load();
-    console.log($('#cAudio'));
-    $('#cAudio')[0].play();
+    var note = $(this).html();
+    var audio = $('#' + note + "Audio");
+    $(audio)[0].load();
+    $(audio)[0].play();
   });
 });
