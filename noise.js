@@ -2,6 +2,7 @@ $(document).ready( function() {
   $('button').click(function() {
     note = $(this).html();
     audio = '#' + note + 'Audio';
+    $(audio).load();
     $(audio).get(0).play();
   });
 
@@ -9,6 +10,7 @@ $(document).ready( function() {
     var notes = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
     if (notes.indexOf(event.key) !== -1) {
       audio = '#' + event.key + 'Audio';
+      $(audio).load();
       $(audio).get(0).play();
     }
   });
