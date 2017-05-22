@@ -12,9 +12,28 @@ $(document).ready( function() {
   $(".c").click(function() {
     alwaysPlay("cAudio");
   });
-  $(".d").click(function() {
-    document.getElementById("dAudio").play();
+  $("body").keydown(function() {
+    if (event.key == 'c') {
+      alwaysPlay("cAudio");
+    }
   });
+
+  $(".d").click(function() {
+    alwaysPlay("dAudio");
+  });
+  $(".e").click(function() {
+    alwaysPlay("eAudio");
+  });
+  $(".f").click(function() {
+    alwaysPlay("fAudio");
+  });
+  $(".g").click(function() {
+    alwaysPlay("gAudio");
+  });
+  $(".a").click(function() {
+    alwaysPlay("aAudio");
+  });
+
   // trying to do this all in one rather than one for each.
   // $('.instrument').on('click', 'button', function(event) {
   //   document.getElementById("Audio").play();
