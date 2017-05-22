@@ -8,31 +8,31 @@ $(document).ready( function() {
   };
 
   $(".c").click(function(){
-    document.getElementById("cAudio").play();
+    playKey('c');
   });
 
   $(".d").click(function(){
-    document.getElementById("dAudio").play();
+    playKey('d');
   });
 
   $(".e").click(function(){
-    document.getElementById("eAudio").play();
+    playKey('e');
   });
 
   $(".f").click(function(){
-    document.getElementById("fAudio").play();
+    playKey('f');
   });
 
   $(".g").click(function(){
-    document.getElementById("gAudio").play();
+    playKey('g');
   });
 
   $(".a").click(function(){
-    document.getElementById("aAudio").play();
+    playKey('a');
   });
 
   $(".b").click(function(){
-    document.getElementById("bAudio").play();
+    playKey('b');
   });
 
   $('body').keydown(function(event){
