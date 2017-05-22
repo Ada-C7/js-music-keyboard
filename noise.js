@@ -5,6 +5,7 @@ $(document).ready( function() {
     var note = $(this).html();
     console.log(note);
     var audio = document.getElementById(note + "Audio");
+    audio.load();
     audio.play();
   });
 
@@ -12,11 +13,11 @@ $(document).ready( function() {
   $("body").keydown(event, function() {
     var allNotes = ["a", "b", "c", "d", "e", "f", "g"];
     if (allNotes.includes(event.key)) {
+      console.log(event);
       var note = event.key;
       var audio = document.getElementById(note + "Audio");
+      audio.load();
       audio.play();
-    } else {
-      alert("Not a valid key, dodo");
     }
   });
 
