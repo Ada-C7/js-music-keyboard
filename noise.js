@@ -1,17 +1,16 @@
 $(document).ready( function() {
 
-  $('.note').click(function(event) {
-    var note = $(this).html();
+  var getNote = function(note) {
     var audio = $('#' + note + "Audio");
     $(audio)[0].load();
     $(audio)[0].play();
+  };
+
+  $('.note').click(function() {
+    getNote($(this).html());
   });
 
   $("body").keydown(function(event) {
-  if (event.key) {
-    var audio = $('#' + event.key + "Audio");
-    $(audio)[0].load();
-    $(audio)[0].play();
-  }
-});
+    getNote(event.key);
+  });
 });
