@@ -25,27 +25,25 @@ $(document).ready(function() {
 
 
   $('.instrument').on('click', 'button.c', function(event) {
-      audioElementC.play();
-});
-$('.instrument').on('click', 'button.d', function(event) {
-    audioElementD.play();
-});
-$('.instrument').on('click', 'button.e', function(event) {
-    audioElementE.play();
-});
-$('.instrument').on('click', 'button.f', function(event) {
-    audioElementF.play();
-});
-$('.instrument').on('click', 'button.g', function(event) {
-    audioElementG.play();
-});
-$('.instrument').on('click', 'button.a', function(event) {
-    audioElementA.play();
-});
-$('.instrument').on('click', 'button.b', function(event) {
-    audioElementB.play();
-});
-
-
+      audioElementC.load(); audioElementC.play();
+  });
+  $('.instrument').on('click', 'button.d', function(event) {
+      audioElementD.load(); audioElementD.load(); audioElementD.play();
+  });
+  $('.instrument').on('click', 'button.e', function(event) {
+      audioElementE.load(); audioElementE.play();
+  });
+  $('.instrument').on('click', 'button.f', function(event) {
+      audioElementF.load(); audioElementF.play();
+  });
+  $('.instrument').on('click', 'button.g', function(event) {
+      audioElementG.load(); audioElementG.play();
+  });
+  $('.instrument').on('click', 'button.a', function(event) {
+      audioElementA.load(); audioElementA.play();
+  });
+  $('.instrument').on('click', 'button.b', function(event) {
+      audioElementB.load(); audioElementB.play();
+  });
 
 });
