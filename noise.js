@@ -20,12 +20,18 @@ $(document).ready( function() {
     }
   };
 
+  var playChord = function(chordNotes) {
+    for (var i = 0; i < chordNotes.length; i++) {
+      playNote(chordNotes[i]);
+    }
+  };
+
   $('body').keydown(function(event) {
-    console.log(event.key);
     if (notes.includes(event.key)) {
       playNote(event.key);
     }
   });
 
   setClickPlay();
+  playChord(['c', 'e', 'g']);
 });
