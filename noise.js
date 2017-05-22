@@ -1,37 +1,34 @@
 $(document).ready( function() {
-  var notes = ['c', 'd', 'e', 'f', 'g', 'a', 'b'];
-
   var playNote = function(note) {
     var audio = $("#" + note + "Audio");
     audio.trigger('load');
     audio.trigger('play');
   };
 
-  var playNoteHelper = function(note) {
+  var playChord = function(chordNotes) {
     return function() {
-      playNote(note);
+      for (var i = 0; i < chordNotes.length; i++) {
+        playNote(chordNotes[i]);
+      }
     };
   };
 
-  var setClickPlay = function() {
-    for (var i = 0; i < notes.length; i++) {
-      var note = notes[i];
-      $('.' + note).on('click', playNoteHelper(note));
+  var setClickChords = function() {
+    var chords = {c: ['c', 'e', 'g'], f: ['f', 'a', 'c'], g: ['g', 'b', 'd']};
+    for (var i = 0; i < Object.keys(chords).length; i++) {
+      var chord = Object.keys(chords)[i];
+      var chordNotes = chords[chord];
+      $('.' + chord + '-chord').on('click', playChord(chordNotes));
     }
   };
 
-  var playChord = function(chordNotes) {
-    for (var i = 0; i < chordNotes.length; i++) {
-      playNote(chordNotes[i]);
-    }
-  };
-
-  $('body').keydown(function(event) {
-    if (notes.includes(event.key)) {
-      playNote(event.key);
-    }
+  $('.note').click(function() {
+    playNote($(this).html());
   });
 
-  setClickPlay();
-  playChord(['c', 'e', 'g']);
+  $('body').keydown(function(event) {
+    playNote(event.key);
+  });
+
+  setClickChords();
 });
