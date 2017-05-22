@@ -6,24 +6,18 @@ $(document).ready( function() {
     var note = $(this).html();
     console.log(note);
     var sound = '#' + note + 'Audio';
-    $(sound).load();
-    $(sound).get(0).play();
 
-    //
-    // if (playing === false) {
-    //   $('#cAudio').trigger('play');
-    //   playing = true;
-    //   $(this).text("stop sound");
-    // } else {
-    //   document.getElementById('#cAudio').pause();
-    //   playing = false;
-    //   $(this).text("restart sound");
-    //
-    //   $(this).play();
-    //   alert('music playing');
-    //
-    // }
-    // console.log(button);
+    if (playing === false) {
+    $(sound).load();
+    console.log($(sound));
+    $(sound).get(0).play();
+    playing = true;
+    // $(this).text('stop sound');
+  } else {
+    $(sound).delay(100);
+    playing = false;
+    // $(this).text('restart sound');
+  }
   });
 
   $('body').keydown(function(event) {
