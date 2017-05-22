@@ -1,4 +1,12 @@
 $(document).ready( function() {
+
+  Array.prototype.contains = function ( needle ) {
+     for(i in this) {
+         if (this[i] == needle) return true;
+     }
+     return false;
+  };
+
   // your code here
   $(".c").click(function(){
     document.getElementById("cAudio").play();
@@ -29,21 +37,9 @@ $(document).ready( function() {
   });
 
   $('body').keydown(function(event){
-    if (event.key == 'c'){
-      document.getElementById("cAudio").play(); }
-    else if (event.key == 'd'){
-      document.getElementById("dAudio").play(); }
-    else if (event.key == 'e'){
-      document.getElementById("eAudio").play(); }
-    else if (event.key == 'f'){
-      document.getElementById("fAudio").play(); }
-    else if (event.key == 'g'){
-      document.getElementById("gAudio").play(); }
-    else if (event.key == 'a'){
-      document.getElementById("aAudio").play(); }
-    else if (event.key == 'a'){
-      document.getElementById("aAudio").play(); }
-    });
-
+    var validKeys = ['c', 'd', 'e', 'f', 'g', 'a', 'b'];
+    if (validKeys.contains(event.key) {
+      document.getElementById(event.key + "Audio").play(); }
+  );
 
 });
