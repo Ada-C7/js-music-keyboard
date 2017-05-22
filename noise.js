@@ -47,6 +47,7 @@ $(document).ready( function() {
     } else if (event.key == 'b'){
       replayNote("b");
     } else {
+      //Just realized how annoying this alert is... you can't use hot keys for anything, I'll try to refactor later 
       alert("You must have typed a letter other than a, b, c, d, e, f, g");
     }
   });
