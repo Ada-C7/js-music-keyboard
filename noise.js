@@ -6,35 +6,34 @@ $(document).ready( function() {
     key.play();
   };
 
+  // clicks
   $('.c').click(function() {
     replayNote("c");
   });
-
-  
-
   $(".d").click(function() {
-    document.getElementById("dAudio").load();
-
-    document.getElementById("dAudio").play();
+    replayNote("d");
   });
-
   $(".e").click(function() {
-    document.getElementById("eAudio").play();
+    replayNote("d");
   });
-
   $(".f").click(function() {
-    document.getElementById("fAudio").play();
+    replayNote("f");
   });
-
   $(".g").click(function() {
-    document.getElementById("gAudio").play();
+    replayNote("g");
   });
-
   $(".a").click(function() {
-    document.getElementById("aAudio").play();
+    replayNote("a");
+  });
+  $(".b").click(function() {
+    replayNote("b");
   });
 
-  $(".b").click(function() {
-    document.getElementById("bAudio").play();
+  //downkey
+  $("body").keydown(function(event){
+    if (event.key == 'c') {
+      // var note = 'c';
+      replayNote("c");
+    }
   });
 });
