@@ -1,3 +1,5 @@
 $(document).ready( function() {
-  // your code here
+  $(".d").click(function() {
+    alert("Handler for .click() called.");
+  });
 });
