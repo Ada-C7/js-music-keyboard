@@ -4,8 +4,8 @@ function playAudio(letter) {
     console.log("HELLO");
     var noteID = ("#" + letter + "Audio");
     console.log(noteID);
-    $("#" + letter + "Audio")[0].load();
-    $("#" + letter + "Audio")[0].play();
+    $(noteID)[0].load();
+    $(noteID)[0].play();
 }
 
 function helper(theNote) {
@@ -16,15 +16,25 @@ function helper(theNote) {
 
 function setupNotes() {
 
-  notes = ["a", "b", "c", "d", "e", "f", "g"];
+  var notes = [ "a", "b", "c", "d", "e", "f", "g"];
+
+
+  $("body").keydown(function(event) {
+
+    console.log("KEY " + event.key);
+    notes.forEach(function(note) {
+     if (event.key == note) {
+      console.log(" NUMBER: " + note);
+      playAudio(note);
+    }});
+  });
 
   for (var i = 0; i < notes.length; i++) {
-    // We get the help element in the Array
-    var note = notes[i];
-      //  When this element gets focus
 
-      $("." + note).click(helper(note));
-      console.log("Event Handler: " + note);
+    letter = notes[i];
+
+    $("." + letter).click(helper(letter));
+    console.log("Event Handler: " + letter);
 
   }
 }
