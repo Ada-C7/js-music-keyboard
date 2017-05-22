@@ -1,8 +1,7 @@
 $(document).ready( function() {
 
   $("button").click(function(){
-    var getClasses = $(this).attr("class");
-    var classes = getClasses.split(" ");
+    var classes = $(this).attr("class").split(" ");
 
     for (i = 0; i < classes.length; i++){
       playKey(classes[i]);
