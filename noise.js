@@ -14,7 +14,6 @@ $(document).ready( function() {
       $("#" + tone + "Audio")[0].play();
   }
 
-
   function makeToneCallback(tone) {
     return function() {
       makeTone(tone);
@@ -22,4 +21,10 @@ $(document).ready( function() {
   }
 
   setupClicks();
+
+// keydown event handler
+  $("body").keydown(function(event) {
+    makeTone(event.key);
+  });
+
 });
