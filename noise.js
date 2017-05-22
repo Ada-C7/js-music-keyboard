@@ -28,5 +28,22 @@ $(document).ready( function() {
     document.getElementById("bAudio").play();
   });
 
+  $('body').keydown(function(event){
+    if (event.key == 'c'){
+      document.getElementById("cAudio").play(); }
+    else if (event.key == 'd'){
+      document.getElementById("dAudio").play(); }
+    else if (event.key == 'e'){
+      document.getElementById("eAudio").play(); }
+    else if (event.key == 'f'){
+      document.getElementById("fAudio").play(); }
+    else if (event.key == 'g'){
+      document.getElementById("gAudio").play(); }
+    else if (event.key == 'a'){
+      document.getElementById("aAudio").play(); }
+    else if (event.key == 'a'){
+      document.getElementById("aAudio").play(); }
+    });
+
 
 });
