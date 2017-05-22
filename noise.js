@@ -7,7 +7,6 @@ $(document).ready( function() {
      return false;
   };
 
-  // your code here
   $(".c").click(function(){
     document.getElementById("cAudio").play();
   });
@@ -37,9 +36,14 @@ $(document).ready( function() {
   });
 
   $('body').keydown(function(event){
+    playKey(event.key);
+  });
+
+  var playKey = function(key){
     var validKeys = ['c', 'd', 'e', 'f', 'g', 'a', 'b'];
-    if (validKeys.contains(event.key) {
-      document.getElementById(event.key + "Audio").play(); }
-  );
+    if (validKeys.contains(key)) {
+      document.getElementById(key + "Audio").play();
+    }
+  };
 
 });
