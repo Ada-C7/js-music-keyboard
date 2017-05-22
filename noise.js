@@ -1,31 +1,32 @@
 $(document).ready( function() {
   // your code here
-  $(".note c").click(function(){
-    audio.play();
+  $(".c").click(function(){
+    document.getElementById("cAudio").play();
   });
 
-  $(".note d").click(function(){
-    audio.play();
+  $(".d").click(function(){
+    document.getElementById("dAudio").play();
   });
 
-  $(".note e").click(function(){
-    audio.play();
+  $(".e").click(function(){
+    document.getElementById("eAudio").play();
   });
 
-  $(".note f").click(function(){
-    audio.play();
+  $(".f").click(function(){
+    document.getElementById("fAudio").play();
   });
 
-  $(".note g").click(function(){
-    audio.play();
+  $(".g").click(function(){
+    document.getElementById("gAudio").play();
   });
 
-  $(".note a").click(function(){
-    audio.play();
+  $(".a").click(function(){
+    document.getElementById("aAudio").play();
   });
 
-  $(".note b").click(function(){
-    audio.play();
+  $(".b").click(function(){
+    document.getElementById("bAudio").play();
   });
+
 
 });
