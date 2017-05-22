@@ -1,5 +1,5 @@
 $(document).ready( function() {
-  $(".d").click(function() {
-    alert("Handler for .click() called.");
+  $(".c").click(function() {
+    document.getElementById("cAudio").play();
   });
 });
