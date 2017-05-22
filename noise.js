@@ -12,6 +12,7 @@ $(document).ready( function() {
   $(".c").click(function() {
     alwaysPlay("cAudio");
   });
+
   $("body").keydown(function() {
     if (event.key == 'c') {
       alwaysPlay("cAudio");
@@ -21,18 +22,63 @@ $(document).ready( function() {
   $(".d").click(function() {
     alwaysPlay("dAudio");
   });
+
+  $("body").keydown(function() {
+    if (event.key == 'd') {
+      alwaysPlay("dAudio");
+    }
+  });
+
   $(".e").click(function() {
     alwaysPlay("eAudio");
   });
+
+  $("body").keydown(function() {
+    if (event.key == 'e') {
+      alwaysPlay("eAudio");
+    }
+  });
+
   $(".f").click(function() {
     alwaysPlay("fAudio");
   });
+
+  $("body").keydown(function() {
+    if (event.key == 'f') {
+      alwaysPlay("fAudio");
+    }
+  });
+
   $(".g").click(function() {
     alwaysPlay("gAudio");
   });
+
+  $("body").keydown(function() {
+    if (event.key == 'g') {
+      alwaysPlay("gAudio");
+    }
+  });
+
   $(".a").click(function() {
     alwaysPlay("aAudio");
   });
+
+  $("body").keydown(function() {
+    if (event.key == 'a') {
+      alwaysPlay("aAudio");
+    }
+  });
+
+  $(".b").click(function() {
+    alwaysPlay("bAudio");
+  });
+
+  $("body").keydown(function() {
+    if (event.key == 'b') {
+      alwaysPlay("bAudio");
+    }
+  });
+
 
   // trying to do this all in one rather than one for each.
   // $('.instrument').on('click', 'button', function(event) {
