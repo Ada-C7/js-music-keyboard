@@ -1,22 +1,27 @@
 $(document).ready( function() {
+  var notes = ['c', 'd', 'e', 'f', 'g', 'a', 'b'];
 
-  var clickPlay = function(note) {
-    var playNote = function() {
+  var playNote = function(note) {
+    return function() {
       var audio = $("#" + note + "Audio");
       audio.trigger('load');
       audio.trigger('play');
     };
-    return playNote;
   };
 
   var setClickPlay = function() {
-    var notes = ['c', 'd', 'e', 'f', 'g', 'a', 'b'];
-
     for (var i = 0; i < notes.length; i++) {
       var note = notes[i];
-      $('.' + note).on('click', clickPlay(note));
+      $('.' + note).on('click', playNote(note));
     }
   };
+
+  $('body').keydown(function(event) {
+    console.log(event.key);
+    if (notes.includes(event.key)) {
+      playNote(event.key)();
+    }
+  });
 
   setClickPlay();
 });
