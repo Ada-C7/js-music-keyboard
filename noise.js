@@ -15,6 +15,15 @@ var helper = function(elementAudioID) {
   };
 };
 
+var keyPressHelper = function(element) {
+  return function(event) {
+    console.log(element);
+    if (event.key == element.key) {
+      alwaysPlay(element.audio);
+    }
+  };
+};
+
   var setupKeyboard = function() {
     var keys = [
       {'key': 'a', 'audio': 'aAudio'},
@@ -29,34 +38,22 @@ var helper = function(elementAudioID) {
     for (var i = 0; i < keys.length; i++) {
       var selected = keys[i];
       $('.' + selected.key).click(helper(selected.audio));
-      $('body').keydown(); {
-        if (event.key == selected.key) {
-          helper(selected.audio);
-        }
-      }
+      $('body').keydown(keyPressHelper(selected));
     }
   };
 
   setupKeyboard();
 
-//   $("body").keydown(function() {
-//     if (event.key == 'c') {
-//       alwaysPlay("cAudio");
-//     }
-//   });
-//
-//   $(".d").click(function() {
-//     alwaysPlay("dAudio");
-//   });
-//
+  $("body").keydown(function() {
+    if (event.key == 'c') {
+      alwaysPlay("cAudio");
+    }
+  });
+
 //   $("body").keydown(function() {
 //     if (event.key == 'd') {
 //       alwaysPlay("dAudio");
 //     }
-//   });
-//
-//   $(".e").click(function() {
-//     alwaysPlay("eAudio");
 //   });
 //
 //   $("body").keydown(function() {
@@ -65,18 +62,10 @@ var helper = function(elementAudioID) {
 //     }
 //   });
 //
-//   $(".f").click(function() {
-//     alwaysPlay("fAudio");
-//   });
-//
 //   $("body").keydown(function() {
 //     if (event.key == 'f') {
 //       alwaysPlay("fAudio");
 //     }
-//   });
-//
-//   $(".g").click(function() {
-//     alwaysPlay("gAudio");
 //   });
 //
 //   $("body").keydown(function() {
@@ -85,18 +74,10 @@ var helper = function(elementAudioID) {
 //     }
 //   });
 //
-//   $(".a").click(function() {
-//     alwaysPlay("aAudio");
-//   });
-//
 //   $("body").keydown(function() {
 //     if (event.key == 'a') {
 //       alwaysPlay("aAudio");
 //     }
-//   });
-//
-//   $(".b").click(function() {
-//     alwaysPlay("bAudio");
 //   });
 //
 //   $("body").keydown(function() {
@@ -104,10 +85,5 @@ var helper = function(elementAudioID) {
 //       alwaysPlay("bAudio");
 //     }
 //   });
-//
-//
-//   // trying to do this all in one rather than one for each.
-//   // $('.instrument').on('click', 'button', function(event) {
-//   //   document.getElementById("Audio").play();
-//   // });
+
 });
