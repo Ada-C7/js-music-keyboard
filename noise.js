@@ -16,6 +16,37 @@ $(document).ready( function() {
 	  audioC.play();
 	});
 
+
+    var audioD = $("#dAudio")[0];
+    $('.d').click(function() {
+  	  audioD.play();
+  	});
+
+    var audioE = $("#eAudio")[0];
+    $('.e').click(function() {
+  	  audioE.play();
+  	});
+
+    var audioF = $("#fAudio")[0];
+    $('.f').click(function() {
+  	  audioF.play();
+  	});
+
+    var audioG = $("#gAudio")[0];
+    $('.g').click(function() {
+  	  audioG.play();
+  	});
+
+    var audioA = $("#aAudio")[0];
+    $('.a').click(function() {
+  	  audioA.play();
+  	});
+
+    var audioB = $("#bAudio")[0];
+    $('.b').click(function() {
+  	  audioB.play();
+  	});
+
 });
 
 // $( document ).ready(function() {
