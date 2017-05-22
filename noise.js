@@ -7,32 +7,8 @@ $(document).ready( function() {
      return false;
   };
 
-  $(".c").click(function(){
-    playKey('c');
-  });
-
-  $(".d").click(function(){
-    playKey('d');
-  });
-
-  $(".e").click(function(){
-    playKey('e');
-  });
-
-  $(".f").click(function(){
-    playKey('f');
-  });
-
-  $(".g").click(function(){
-    playKey('g');
-  });
-
-  $(".a").click(function(){
-    playKey('a');
-  });
-
-  $(".b").click(function(){
-    playKey('b');
+  button.click(function(){
+    playKey(this.class);
   });
 
   $('body').keydown(function(event){
