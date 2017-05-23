@@ -20,9 +20,25 @@ $(document).ready( function() {
   }
   });
 
+  function buttonExists(keyCharacter) {
+    var buttons = $('button');
+
+    for (var i = 0; i < buttons.length; i++) {
+      console.log('called buttonExists', buttons[i].html);
+      if ($(buttons[i]).html() == keyCharacter) {
+        console.log('found key!', keyCharacter);
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   $('body').keydown(function(event) {
-      var keys = {'c': true, 'd': true, 'e': true, 'f': true, 'g': true, 'a': true, 'b': true};
-    if (keys[event.key]) {
+    // var keys1 = ['c', 'd', 'e', 'f', 'g', 'a', 'b'];
+    // var keys = {'c': true, 'd': true, 'e': true, 'f': true, 'g': true, 'a': true, 'b': true};
+
+    if (buttonExists(event.key)) {
       var note = event.key;
       console.log(note);
       var sound = '#' + note + 'Audio';
