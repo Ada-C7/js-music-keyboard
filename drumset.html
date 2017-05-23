@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Drumset</title>
+    <meta charset="utf-8">
+    <link href="noise.css" media="screen" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="drumset.js"></script>
+  </head>
+  <body>
+    <div id="audio_embeds">
+      <audio id="b">
+        <source src="media/bass_drum.mp3" type="audio/mpeg"></source>
+      </audio>
+      <audio id="s">
+        <source src="media/snare_drum.mp3" type="audio/mpeg"></source>
+      </audio>
+      <audio id="h">
+        <source src="media/hi_hat.mp3" type="audio/mpeg"></source>
+      </audio>
+      <audio id="l">
+        <source src="media/sad_cat.mp3" type="audio/mpeg"></source>
+      </audio>
+      <audio id="m">
+        <source src="media/high_meow.mp3" type="audio/mpeg"></source>
+      </audio>
+    </div>
+
+    <div class="instrument">
+      <button class="note bass_drum">b</button>
+      <button class="note snare_drum">s</button>
+      <button class="note hi_hat">h</button>
+      <button class="note sad_cat">l</button>
+      <button class="note high_meow">m</button>
+
+      <div class="loops">
+        <h2>Hi-Hat Loop</h2>
+        <table>
+          <tr>
+            <td class="hi_hat off">off</td>
+            <td class="hi_hat slow">slow</td>
+            <td class="hi_hat medium">medium</td>
+            <td class="hi_hat fast">fast</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

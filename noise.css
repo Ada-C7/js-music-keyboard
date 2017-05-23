@@ -3,13 +3,37 @@ html {
 }
 
 body {
-  background-color: black;   
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
 }
 
 .instrument {
   height: 10rem;
   width: 60rem;
   margin: 5rem auto;
+}
+
+td {
+  width: 50px;
+  color: black;
+  text-align: center;
+}
+
+.off {
+  background-color: lightgray;
+}
+
+.slow {
+  background-color: yellow;
+}
+
+.medium {
+  background-color: orange;
+}
+
+.fast {
+  background-color: red;
 }
 
 .note {
