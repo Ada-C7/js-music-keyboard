@@ -22,7 +22,7 @@ $(document).ready(function() {
     // $("."+letter).addClass("active").delay(5000).removeClass("active");
     setTimeout(function(){
       $("."+letter).removeClass("active");
-    }, 150);
+    }, 120);
     play(letter);
   });
 
