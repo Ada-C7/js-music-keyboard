@@ -1,39 +1,79 @@
 $(document).ready( function() {
 
+  // var allAudio = [$("#cAudio"), $("#dAudio"), $("#eAudio"), $("#fAudio"), $("#gAudio"), $("#aAudio"), $("#bAudio")];
+  //
+  // var colorClass = [$('.c'), $('.d'), $('.e'), $('.f'), $('.g'), $('.a'), $('.b')];
+  //
+  //
+  // for (var i = 0; i < allAudio.length; i++) {
+  //   var audio = allAudio[i][0];
+  //   colorClass[i].click(function() {
+  //     audio[i].play();
+  //   });
+  // }
+  //
   var audioC = $("#cAudio")[0];
-  // var audio2 = $("#clickSound2")[0];
   $('.c').click(function() {
-    audioC.play();
+    if (audioC.paused) {
+        audioC.play();
+    } else {
+      audioC.currentTime = 0;
+    }
   });
+
 
   var audioD = $("#dAudio")[0];
   $('.d').click(function() {
-    audioD.play();
+    if (audioD.paused) {
+        audioD.play();
+    } else {
+      audioD.currentTime = 0;
+    }
   });
 
   var audioE = $("#eAudio")[0];
   $('.e').click(function() {
-    audioE.play();
+    if (audioE.paused) {
+        audioE.play();
+    } else {
+      audioE.currentTime = 0;
+    }
   });
 
   var audioF = $("#fAudio")[0];
   $('.f').click(function() {
-    audioF.play();
+    if (audioF.paused) {
+        audioF.play();
+    } else {
+      audioF.currentTime = 0;
+    }
   });
 
   var audioG = $("#gAudio")[0];
   $('.g').click(function() {
-    audioG.play();
+    if (audioG.paused) {
+        audioG.play();
+    } else {
+      audioG.currentTime = 0;
+    }
   });
 
   var audioA = $("#aAudio")[0];
   $('.a').click(function() {
-    audioA.play();
+    if (audioA.paused) {
+        audioA.play();
+    } else {
+      audioA.currentTime = 0;
+    }
   });
 
   var audioB = $("#bAudio")[0];
   $('.b').click(function() {
-    audioB.play();
+    if (audioB.paused) {
+        audioB.play();
+    } else {
+      audioB.currentTime = 0;
+    }
   });
 
   $('body').keydown(function(event){
