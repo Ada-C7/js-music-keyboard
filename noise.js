@@ -1,13 +1,13 @@
 $(document).ready( function() {
 
+//function to play audio based on ID
 function playAudio(letter) {
-    console.log("HELLO");
     var noteID = ("#" + letter + "Audio");
-    console.log(noteID);
     $(noteID)[0].load();
     $(noteID)[0].play();
 }
 
+//helper function for the closure
 function helper(theNote) {
   return function() {
     playAudio(theNote);
@@ -18,38 +18,22 @@ function setupNotes() {
 
   var notes = [ "a", "b", "c", "d", "e", "f", "g"];
 
-
+  //event handler for key presses -- probably shouldn't be part of setupNotes()?
   $("body").keydown(function(event) {
-
-    console.log("KEY " + event.key);
     notes.forEach(function(note) {
      if (event.key == note) {
-      console.log(" NUMBER: " + note);
       playAudio(note);
+      // was trying to toggle/add the active class on keydown but this is not working (trying add b/c i thought maybe toggle was happening too quickly)
+      $("." + note).addClass('.active');
     }});
   });
 
-  for (var i = 0; i < notes.length; i++) {
-
-    letter = notes[i];
-
+  //create event handlers for clicks for each note
+  notes.forEach(function(letter) {
     $("." + letter).click(helper(letter));
-    console.log("Event Handler: " + letter);
-
-  }
+  });
 }
 
 setupNotes();
-
-  //
-  // $(".c").click(function(){
-  //   console.log("C");
-  //   console.log($('#cAudio'));
-  //   $("#cAudio")[0].load();
-  //   $("#cAudio")[0].play();
-  //
-  // });
-
-  //set up on clicks so that the right note plays when you click on the corresponding button
 
 });
