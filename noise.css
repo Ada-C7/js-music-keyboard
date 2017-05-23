@@ -3,7 +3,13 @@ html {
 }
 
 body {
-  background-color: black;   
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.title {
+  margin-top: 2rem;
 }
 
 .instrument {
