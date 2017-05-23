@@ -1,6 +1,5 @@
 $(document).ready( function() {
 
-
   var Note = function(letter) {
     this.letter = letter;
   };
@@ -28,32 +27,7 @@ $(document).ready( function() {
 
   $('body').keydown(function(event) {
 
-    var note = $(this).html();
-    // console.log(note);
-
-    if (event.key === 'c') {
-      var newNote = new Note('c');
-      newNote.playNote();
-    } else if (event.key === 'd') {
-      newNote = new Note('d');
-      newNote.playNote();
-    } else if (event.key === 'e') {
-      newNote = new Note('e');
-      newNote.playNote();
-    } else if (event.key === 'f') {
-      newNote = new Note('f');
-      newNote.playNote();
-    } else if (event.key === 'g') {
-      newNote = new Note('g');
-      newNote.playNote();
-    } else if (event.key === 'a') {
-      newNote = new Note('a');
-      newNote.playNote();
-    } else if (event.key === 'b') {
-      newNote = new Note('b');
-      newNote.playNote();
-    }
-
-
+    newNote = new Note(event.key);
+    newNote.playNote();
   });
 });
