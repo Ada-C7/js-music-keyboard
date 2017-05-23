@@ -23,38 +23,37 @@ $(document).ready( function() {
   $('.instrument').on('click', 'button', function(event) {
     var note = $(this).html();
     var newNote = new Note(note);
-    $(this)(newNote.playNote());
+    newNote.playNote();
   });
 
   $('body').keydown(function(event) {
-    // var note = $(this).html();
+
+    var note = $(this).html();
     // console.log(note);
 
-    // if (event.key === note) {
-    //   var newNote = new Note(note);
-    //   $(this)(newNote.playNote());
-    // }
     if (event.key === 'c') {
       var newNote = new Note('c');
-      $(this)(newNote.playNote());
+      newNote.playNote();
     } else if (event.key === 'd') {
-      var newNote = new Note('d');
-      $(this)(newNote.playNote());
+      newNote = new Note('d');
+      newNote.playNote();
     } else if (event.key === 'e') {
-      var newNote = new Note('e');
-      $(this)(newNote.playNote());
+      newNote = new Note('e');
+      newNote.playNote();
     } else if (event.key === 'f') {
-      var newNote = new Note('f');
-      $(this)(newNote.playNote());
+      newNote = new Note('f');
+      newNote.playNote();
     } else if (event.key === 'g') {
-      var newNote = new Note('g');
-      $(this)(newNote.playNote());
-    } else if (event.ket === 'a') {
-      var newNote = new Note('a');
-      $(this)(newNote.playNote());
+      newNote = new Note('g');
+      newNote.playNote();
+    } else if (event.key === 'a') {
+      newNote = new Note('a');
+      newNote.playNote();
     } else if (event.key === 'b') {
-      var newNote = new Note('b');
-      $(this)(newNote.playNote());
+      newNote = new Note('b');
+      newNote.playNote();
     }
+
+
   });
 });
