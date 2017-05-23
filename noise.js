@@ -1,6 +1,5 @@
 $(document).ready( function() {
 
-
   var Note = function(letter) {
     this.letter = letter;
   };
@@ -23,6 +22,12 @@ $(document).ready( function() {
   $('.instrument').on('click', 'button', function(event) {
     var note = $(this).html();
     var newNote = new Note(note);
-    $(this)(newNote.playNote());
+    newNote.playNote();
+  });
+
+  $('body').keydown(function(event) {
+
+    newNote = new Note(event.key);
+    newNote.playNote();
   });
 });
