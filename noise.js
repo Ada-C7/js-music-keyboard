@@ -30,14 +30,10 @@ $(document).ready( function() {
         return true;
       }
     }
-
     return false;
   }
 
   $('body').keydown(function(event) {
-    // var keys1 = ['c', 'd', 'e', 'f', 'g', 'a', 'b'];
-    // var keys = {'c': true, 'd': true, 'e': true, 'f': true, 'g': true, 'a': true, 'b': true};
-
     if (buttonExists(event.key)) {
       var note = event.key;
       console.log(note);
