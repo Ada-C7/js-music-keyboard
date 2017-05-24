@@ -1,11 +1,18 @@
 $(document).ready( function() {
-    // curious how to DRY this up. i want to make a key variable and a keyAudio variable that will be set on click
-    //  with two variables, only have to write  this function once
-    $('body').click(function(event) {
-        var target = (event.target.classList[1]);
-        var key = target + "Audio"
-        console.log(key);
 
-        document.getElementById(key).play();
-    })
+    // $('body').click(function(event) {
+    //     var target = (event.target.classList[1]);
+    //     var keyAudio = target + "Audio"
+    //     console.log(keyAudio);
+    //
+    //     document.getElementById(keyAudio).play();
+    // })
+    //
+    // $('body').keypress(function(event){
+    //     var target = (event.originalEvent.key);
+    //     var keyAudio = target + "Audio"
+    //     // console.log('this is the key ' + key);
+    //     document.getElementById(keyAudio).play();
+    //
+    // })
 });
