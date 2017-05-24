@@ -1,9 +1,25 @@
 $(document).ready( function() {
+    $('body').bind('keypress click', function(event){
+        var hasBeenClicked = false;
+        $('body').click(function(event){
+            hasBeenClicked = true;
+            console.log(hasBeenClicked);
+        })
+        if (hasBeenClicked == true){
+            var target = (event.target.classList[1]);
+        } else {
+            var target = (event.originalEvent.key);
+
+        }
+
+        var keyAudio = target + "Audio"
+        document.getElementById(keyAudio).play();
+    });
+
 
     // $('body').click(function(event) {
     //     var target = (event.target.classList[1]);
     //     var keyAudio = target + "Audio"
-    //     console.log(keyAudio);
     //
     //     document.getElementById(keyAudio).play();
     // })
@@ -11,7 +27,6 @@ $(document).ready( function() {
     // $('body').keypress(function(event){
     //     var target = (event.originalEvent.key);
     //     var keyAudio = target + "Audio"
-    //     // console.log('this is the key ' + key);
     //     document.getElementById(keyAudio).play();
     //
     // })
