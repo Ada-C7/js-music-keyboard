@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: black;   
+  background-color: black;
 }
 
 .instrument {
@@ -20,6 +20,10 @@ body {
   margin: 0;
   padding: 0;
   border: 3px solid currentColor;
+}
+
+.change {
+    background-color: pink;
 }
 
 .note:focus { outline: none; }
